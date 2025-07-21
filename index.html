@@ -4,27 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cristovão Oliveira | Colombo Tech</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
     <style>
+    
+        :root {
+            --bg-color: #1B263B;
+            --primary-text-color: #ffffff;
+            --secondary-text-color: #d1d5db;
+            --button-bg-color: #ffffff;
+            --button-text-color: #1B263B;
+            --button-hover-bg-color: #e2e8f0;
+            --shadow-color: rgba(0, 0, 0, 0.2);
+            --font-main: 'Poppins', sans-serif;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            background-color: #1B263B; /* Azul-marinho */
-            color: #ffffff;
+            background-color: var(--bg-color);
+            color: var(--primary-text-color);
+            font-family: var(--font-main);
+            
+            /* Estrutura flex para centralização perfeita */
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            padding: 20px 0; 
         }
 
         .container {
             max-width: 400px;
             width: 90%;
-            padding: 20px;
             text-align: center;
         }
 
@@ -36,18 +59,25 @@
             width: 100px;
             height: 100px;
             border-radius: 50%;
+            border: 3px solid var(--primary-text-color);
             margin-bottom: 15px;
-            border: 3px solid #ffffff;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-pic:hover {
+            transform: scale(1.05); 
         }
 
         h1 {
-            font-size: 24px;
-            margin-bottom: 10px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 5px;
         }
 
         p {
-            font-size: 16px;
-            color: #d1d5db; /* Cinza claro para o @usuário */
+            font-size: 1rem; 
+            color: var(--secondary-text-color);
+            margin-bottom: 10px;
         }
 
         .links {
@@ -58,49 +88,48 @@
 
         .link-btn {
             display: block;
-            background-color: #ffffff;
-            color: #1B263B;
+            background-color: var(--button-bg-color);
+            color: var(--button-text-color);
             text-decoration: none;
             padding: 15px;
-            border-radius: 10px;
-            font-size: 18px;
-            font-weight: bold;
+            border-radius: 8px;
+            font-size: 1.1rem; 
+            font-weight: 600;
             transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        .link-btn:hover {
-            background-color: #d1d5db;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        
+        .link-btn:hover,
+        .link-btn:focus-visible {
+            background-color: var(--button-hover-bg-color);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px var(--shadow-color);
+            outline: none; 
+        }
+        
+        
+        .link-btn.disabled {
+             opacity: 0.7;
+             pointer-events: none;
         }
 
-        /* Responsividade */
-        @media (max-width: 600px) {
-            .container {
-                width: 95%;
-            }
-
-            .link-btn {
-                font-size: 16px;
-                padding: 12px;
-            }
-        }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <img src="https://i.postimg.cc/wTqGHzYD/cristovao-tech.png" alt="Foto de Perfil" class="profile-pic">
+            <img src="https://i.postimg.cc/wTqGHzYD/cristovao-tech.png" alt="Foto de Perfil de Cristóvão Oliveira" class="profile-pic">
             <h1>Cristóvão Oliveira</h1>
             <p>Tecnologia e Gestão de Redes Sociais</p>
         </header>
-        <div class="links">
-            <a href="https://wa.me/5584991844875?text=Oi%2C%20Crist%C3%B3v%C3%A3o%21%20Tudo%20bem%3F%20Gostaria%20de%20saber%20se%20voc%C3%AA%20tem%20disponibilidade%20de%20hor%C3%A1rio.%20Gostaria%20de%20contrat%C3%A1-lo%20para" class="link-btn">📞 Agende um serviço comigo</a>
-            <a href="#l2" class="link-btn">Trabalhos realizados | Portfólio Tech</a>
-            <a href="https://mega.nz/folder/IZR1SKSC#rn4VxKYTg13LABIS0yLyHA" class="link-btn">Trabalhos realizados | Portfólio Videomaker</a>
-            <a href="https://wa.me/5584991844875" class="link-btn">WhatsApp</a>
-            <a href="mailto:cristovaooliveira@protonmail.com?subject=Disponibilidade%20para%20trabalho&body=Oi%2C%20Crist%C3%B3v%C3%A3o%21%20Tudo%20bem%3F%20Gostaria%20de%20saber%20se%20voc%C3%AA%20tem%20disponibilidade%20para%20realizar%20o%20trabalho%20de" class="link-btn">Me envie um e-mail</a>
-        </div>
+        <main class="links">
+            <a href="https://wa.me/5584991844875?text=Oi%2C%20Crist%C3%B3v%C3%A3o%21%20Tudo%20bem%3F%20Gostaria%20de%20saber%20se%20voc%C3%AA%20tem%20disponibilidade%20de%20hor%C3%A1rio.%20Gostaria%20de%20contrat%C3%A1-lo%20para" class="link-btn" target="_blank" rel="noopener noreferrer">📞 Agende um serviço comigo</a>
+            <a href="#" class="link-btn disabled">Trabalhos realizados | Portfólio Tech</a>
+            <a href="https://mega.nz/folder/IZR1SKSC#rn4VxKYTg13LABIS0yLyHA" class="link-btn" target="_blank" rel="noopener noreferrer">🎬 Trabalhos realizados | Portfólio Videomaker</a>
+            <a href="https://wa.me/5584991844875" class="link-btn" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
+            <a href="mailto:cristovaooliveira@protonmail.com?subject=Disponibilidade%20para%20trabalho&body=Oi%2C%20Crist%C3%B3v%C3%A3o%21%20Tudo%20bem%3F%20Gostaria%20de%20saber%20se%20voc%C3%AA%20tem%20disponibilidade%20para%20realizar%20o%20trabalho%20de" class="link-btn">✉️ Me envie um e-mail</a>
+        </main>
     </div>
 </body>
 </html>
