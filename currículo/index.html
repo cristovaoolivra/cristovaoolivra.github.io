@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Currículo | Cristóvão</title>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -23,7 +22,6 @@
       margin: 0;
       padding: 20px;
       text-align: center;
-      overflow: hidden;
     }
 
     .botao1 {
@@ -42,7 +40,7 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       transition: background-color 0.3s ease, transform 0.2s, box-shadow 0.2s;
       width: 100%;
-      max-width: 300px;
+      max-width: 320px;
       cursor: pointer;
     }
 
@@ -56,9 +54,10 @@
       transform: translateY(0);
     }
 
-    .botao1 .icon {
-      font-family: 'Material Icons';
-      font-size: 20px;
+    .icon {
+      width: 18px;
+      height: auto;
+      fill: #0d1b2a;
       display: flex;
     }
 
@@ -68,8 +67,8 @@
         padding: 16px 32px;
         max-width: 350px;
       }
-      .botao1 .icon {
-        font-size: 24px;
+      .icon {
+        width: 22px;
       }
     }
 
@@ -81,15 +80,17 @@
         font-size: 20px;
         padding: 18px 36px;
       }
-      .botao1 .icon {
-        font-size: 26px;
+      .icon {
+        width: 24px;
       }
     }
   </style>
 </head>
 <body>
   <a href="https://drive.google.com/file/d/1AyKxBQhdfPiEdEBUesrlciPm0hVN9_Uy/view?usp=drivesdk" class="botao1">
-    <span class="icon">description</span>
+    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
+    </svg>
     Acesse aqui o meu currículo
   </a>
 </body>
