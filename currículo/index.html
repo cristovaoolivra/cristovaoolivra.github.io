@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Currículo | Cristóvão</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -18,20 +19,24 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
+      height: 100vh;
       margin: 0;
       padding: 20px;
       text-align: center;
+      overflow: hidden;
     }
 
     .botao1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
       background-color: #add8e6;
       color: #0d1b2a;
       padding: 14px 24px;
       font-size: 16px;
       font-weight: bold;
       text-decoration: none;
-      display: inline-block;
       border: none;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -51,11 +56,20 @@
       transform: translateY(0);
     }
 
+    .botao1 .icon {
+      font-family: 'Material Icons';
+      font-size: 20px;
+      display: flex;
+    }
+
     @media (min-width: 480px) {
       .botao1 {
         font-size: 18px;
         padding: 16px 32px;
         max-width: 350px;
+      }
+      .botao1 .icon {
+        font-size: 24px;
       }
     }
 
@@ -67,10 +81,16 @@
         font-size: 20px;
         padding: 18px 36px;
       }
+      .botao1 .icon {
+        font-size: 26px;
+      }
     }
   </style>
 </head>
 <body>
-  <a href="https://drive.google.com/file/d/1AyKxBQhdfPiEdEBUesrlciPm0hVN9_Uy/view?usp=drivesdk" class="botao1">Acesse aqui o meu currículo</a>
+  <a href="https://drive.google.com/file/d/1AyKxBQhdfPiEdEBUesrlciPm0hVN9_Uy/view?usp=drivesdk" class="botao1">
+    <span class="icon">description</span>
+    Acesse aqui o meu currículo
+  </a>
 </body>
 </html>
