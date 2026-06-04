@@ -30,11 +30,13 @@
       text-align: center;
     }
 
-    .botao1, .botao2 {
+    .botao1 {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
+      background-color: #1F75FE;
+      color: #0d1b2a;
       padding: 14px 24px;
       font-size: 16px;
       font-weight: bold;
@@ -51,40 +53,20 @@
       animation: fade-up 0.6s ease forwards;
     }
 
-    /* Estilo do Botão Principal (Google Drive) */
-    .botao1 {
-      background-color: #1F75FE;
-      color: #0d1b2a;
-    }
-
     .botao1:hover {
       background-color: #1664db;
       transform: translateY(-2px) scale(1);
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
     }
 
-    /* Estilo do Segundo Botão (Link Direto do GitHub Pages) */
-    .botao2 {
-      background-color: transparent;
-      color: #e0e1dd;
-      border: 2px solid #1F75FE;
-      animation-delay: 0.15s; /* Efeito cascata na animação */
-    }
-
-    .botao2:hover {
-      background-color: rgba(31, 117, 254, 0.1);
-      transform: translateY(-2px) scale(1);
-      box-shadow: 0 6px 12px rgba(31, 117, 254, 0.15);
-    }
-
-    .botao1:active, .botao2:active {
+    .botao1:active {
       transform: translateY(0) scale(0.98);
     }
 
     .icon {
       width: 18px;
       height: auto;
-      fill: currentColor; /* Faz o ícone herdar a cor do texto automaticamente */
+      fill: #0d1b2a;
     }
 
     @keyframes fade-up {
@@ -94,9 +76,8 @@
       }
     }
 
-    /* Ajustes para ecrãs maiores */
     @media (min-width: 480px) {
-      .botao1, .botao2 {
+      .botao1 {
         font-size: 18px;
         padding: 16px 32px;
       }
@@ -106,7 +87,7 @@
     }
 
     @media (min-width: 768px) {
-      .botao1, .botao2 {
+      .botao1 {
         font-size: 20px;
         padding: 18px 36px;
       }
@@ -122,10 +103,13 @@
     <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
       <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
     </svg>
-    Acesse aqui o meu currículo
+    Acesse aqui o meu currículo (Google Drive)
   </a>
 
-  <a href="https://seu-usuario.github.io/seu-repositorio/seu-curriculo.pdf" target="_blank" class="botao2">
+  <a href="https://cristovaoolivra.pages.dev/curriculo/curriculo.pdf" target="_blank" class="botao1" style="animation-delay: 0.1s;">
+    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
+    </svg>
     Não conseguiu acessar? Clique aqui
   </a>
 
