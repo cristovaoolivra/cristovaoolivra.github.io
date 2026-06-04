@@ -28,6 +28,7 @@
       height: 100vh;
       width: 100%;
       text-align: center;
+      padding: 15px;
     }
 
     .botao1 {
@@ -38,7 +39,7 @@
       background-color: #1F75FE;
       color: #0d1b2a;
       padding: 14px 24px;
-      font-size: 16px;
+      font-size: 15px;
       font-weight: bold;
       text-decoration: none;
       border: none;
@@ -46,8 +47,7 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       transition: background-color 0.3s ease, transform 0.2s, box-shadow 0.2s;
       width: 90%;
-      max-width: 350px;
-      cursor: pointer;
+      max-width: 350px;      cursor: pointer;
       opacity: 0;
       transform: translateY(20px) scale(0.95);
       animation: fade-up 0.6s ease forwards;
@@ -63,9 +63,51 @@
       transform: translateY(0) scale(0.98);
     }
 
+    .botao2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background-color: transparent;
+      color: #1F75FE;
+      padding: 14px 24px;
+      font-size: 15px;
+      font-weight: bold;
+      text-decoration: none;
+      border: 2px solid #1F75FE;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(31, 117, 254, 0.2);
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s, box-shadow 0.2s;
+      width: 90%;
+      max-width: 350px;
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(20px) scale(0.95);
+      animation: fade-up 0.6s ease 0.2s forwards;
+    }
+
+    .botao2:hover {
+      background-color: #1F75FE;
+      color: #0d1b2a;
+      transform: translateY(-2px) scale(1);
+      box-shadow: 0 6px 12px rgba(31, 117, 254, 0.35);
+    }
+
+    .botao2:active {
+      transform: translateY(0) scale(0.98);
+    }
     .icon {
       width: 18px;
       height: auto;
+      fill: #0d1b2a;
+    }
+
+    .botao2 .icon {
+      fill: #1F75FE;
+      transition: fill 0.3s ease;
+    }
+
+    .botao2:hover .icon {
       fill: #0d1b2a;
     }
 
@@ -76,23 +118,66 @@
       }
     }
 
+    @media (max-width: 359px) {
+      .botao1, .botao2 {
+        font-size: 13px;
+        padding: 12px 18px;
+        gap: 8px;
+      }
+      .icon {
+        width: 16px;
+      }
+    }
+
+    @media (min-width: 360px) and (max-width: 479px) {
+      .botao1, .botao2 {
+        font-size: 14px;
+        padding: 13px 20px;
+      }
+      .icon {
+        width: 17px;
+      }
+    }
+
     @media (min-width: 480px) {
-      .botao1 {
+      .botao1, .botao2 {
         font-size: 18px;
         padding: 16px 32px;
       }
       .icon {
-        width: 22px;
-      }
+        width: 22px;      }
     }
 
     @media (min-width: 768px) {
-      .botao1 {
+      .botao1, .botao2 {
         font-size: 20px;
         padding: 18px 36px;
+        max-width: 400px;
       }
       .icon {
         width: 24px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .botao1, .botao2 {
+        font-size: 22px;
+        padding: 20px 40px;
+        max-width: 450px;
+      }
+      .icon {
+        width: 26px;
+      }
+    }
+
+    @media (max-height: 500px) and (orientation: landscape) {
+      body {
+        gap: 12px;
+        padding: 10px;
+      }
+      .botao1, .botao2 {
+        font-size: 14px;
+        padding: 10px 20px;
       }
     }
   </style>
@@ -106,9 +191,8 @@
     Acesse aqui o meu currículo (Google Drive)
   </a>
 
-  <a href="https://cristovaoolivratech.pages.dev/curriculo/curriculo.pdf" target="_blank" class="botao1">
+  <a href="https://cristovaoolivratech.pages.dev/curriculo/curriculo.pdf" target="_blank" class="botao2">
     Não conseguiu acessar? Clique aqui
   </a>
-
 </body>
 </html>
