@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currículo | Cristóvão</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      background-color: #0d1b2a;
+      color: #e0e1dd;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column; /* Alinha os botões um embaixo do outro */
+      justify-content: center;
+      align-items: center;
+      gap: 20px; /* Espaço entre os botões */
+      height: 100vh;
+      width: 100%;
+      text-align: center;
+    }
+
+    .botao1, .botao2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease, transform 0.2s, box-shadow 0.2s;
+      width: 90%;
+      max-width: 350px;
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(20px) scale(0.95);
+      animation: fade-up 0.6s ease forwards;
+    }
+
+    .botao1 {
+      background-color: #1F75FE;
+      color: #0d1b2a;
+    }
+
+    /* Estilo do novo botão (cor diferente para destaque) */
+    .botao2 {
+      background-color: transparent;
+      color: #e0e1dd;
+      border: 2px solid #1F75FE;
+      animation-delay: 0.2s; /* Aparece um pouco depois */
+    }
+
+    .botao1:hover {
+      background-color: #1664db;
+      transform: translateY(-2px) scale(1);
+    }
+
+    .botao2:hover {
+      background-color: rgba(31, 117, 254, 0.1);
+      transform: translateY(-2px) scale(1);
+    }
+
+    .icon {
+      width: 18px;
+      height: auto;
+      fill: currentColor;
+    }
+
+    @keyframes fade-up {
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @media (min-width: 768px) {
+      .botao1, .botao2 {
+        font-size: 18px;
+        padding: 16px 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="https://drive.google.com/file/d/1XmKyKsDzKwkRoQEYHtK4PxdtQAu8WD3y/view?usp=drivesdk" target="_blank" class="botao1">
+    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
+    </svg>
+    Acesse aqui o meu currículo
+  </a>
+
+  <a href="URL_DO_SEU_ARQUIVO.pdf" target="_blank" class="botao2">
+    Não conseguiu acessar? Clique aqui
+  </a>
+
+</body>
+</html>
