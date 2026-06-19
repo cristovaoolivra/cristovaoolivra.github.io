@@ -47,8 +47,7 @@
             text-align: center;
         }
 
-        header {
-            margin-bottom: 30px;
+        header {            margin-bottom: 30px;
         }
 
         .profile-wrapper {
@@ -74,21 +73,13 @@
             position: absolute;
             bottom: 2px;
             right: 2px;
-            background-color: var(--instagram-blue);
-            border: 2px solid #ffffff;
-            border-radius: 50%;
-            width: 26px;
-            height: 26px;
+            width: 30px;
+            height: 30px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 16px;
-            font-weight: 700;
-            color: #ffffff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
             pointer-events: none;
-            line-height: 1;
-            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25));
         }
 
         h1 {
@@ -105,8 +96,7 @@
 
         .links {
             display: flex;
-            flex-direction: column;
-            gap: 15px;
+            flex-direction: column;            gap: 15px;
         }
 
         .link-btn {
@@ -146,11 +136,16 @@
         <header>
             <div class="profile-wrapper">
                 <img src="https://i.postimg.cc/qR3T49dd/file-000000007638720ebd924f5b477af070.png" alt="Foto de Perfil" class="profile-pic">
-                <span class="verified-badge">✓</span>
+                <span class="verified-badge">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30">
+                        <circle cx="12" cy="12" r="12" fill="#0095F6"/>
+                        <circle cx="12" cy="12" r="11" fill="none" stroke="#ffffff" stroke-width="2"/>
+                        <path d="M7 12.5 L10.5 16 L17 9" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
             </div>
             <h1>Cristóvão Oliveira</h1>
-            <p>Tecnologia e Gestão de Redes Sociais / Social Midia</p>
-        </header>
+            <p>Tecnologia e Gestão de Redes Sociais / Social Midia</p>        </header>
         <main class="links">
             <a href="https://wa.me/5584991844875?text=Oi%2C%20Crist%C3%B3v%C3%A3o%21%20Tudo%20bem%3F%20Gostaria%20de%20saber%20se%20voc%C3%AA%20tem%20disponibilidade%20de%20hor%C3%A1rio.%20Gostaria%20de%20contrat%C3%A1-lo%20para" class="link-btn" target="_blank" rel="noopener noreferrer">📞 Agende comigo</a>
             <a href="https://cristovaoolivratech.pages.dev/portifolio/" class="link-btn">Trabalhos realizados | Portfólio Tech</a>
